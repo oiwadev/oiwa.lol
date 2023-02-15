@@ -1,1 +1,56 @@
-function _0x2bd9(){var _0x565b80=['48kdCCSt','key','2537TKFXzp','keydown','707228tQDqyW','5VhnLfj','16vUzAlB','137000uuSDPI','188607Ymlndm','876522oTCIgH','491568rkNQTK','/valentines/index.html','href','848970VcDFAV','indexOf'];_0x2bd9=function(){return _0x565b80;};return _0x2bd9();}var _0x1f33a8=_0x5417;(function(_0x103e1f,_0x820a9c){var _0x5abf33=_0x5417,_0x219280=_0x103e1f();while(!![]){try{var _0x22dc80=-parseInt(_0x5abf33(0x128))/0x1*(parseInt(_0x5abf33(0x126))/0x2)+-parseInt(_0x5abf33(0x11f))/0x3+parseInt(_0x5abf33(0x12a))/0x4*(parseInt(_0x5abf33(0x11c))/0x5)+-parseInt(_0x5abf33(0x120))/0x6+parseInt(_0x5abf33(0x121))/0x7+parseInt(_0x5abf33(0x11d))/0x8*(parseInt(_0x5abf33(0x124))/0x9)+-parseInt(_0x5abf33(0x11e))/0xa;if(_0x22dc80===_0x820a9c)break;else _0x219280['push'](_0x219280['shift']());}catch(_0xfdd227){_0x219280['push'](_0x219280['shift']());}}}(_0x2bd9,0x25253));var pattern=['v','a','l','e','n','t','i','n','e','s','2','0','2','3'],current=0x0,keyHandler=function(_0x5adc6c){var _0x30e44f=_0x5417;if(pattern[_0x30e44f(0x125)](_0x5adc6c[_0x30e44f(0x127)])<0x0||_0x5adc6c[_0x30e44f(0x127)]!==pattern[current]){current=0x0;return;}current++,pattern['length']===current&&(current=0x0,location[_0x30e44f(0x123)]=_0x30e44f(0x122));};function _0x5417(_0x484567,_0x55e977){var _0x2bd9ec=_0x2bd9();return _0x5417=function(_0x5417bb,_0x238fee){_0x5417bb=_0x5417bb-0x11c;var _0x2cf0c8=_0x2bd9ec[_0x5417bb];return _0x2cf0c8;},_0x5417(_0x484567,_0x55e977);}document['addEventListener'](_0x1f33a8(0x129),keyHandler,![]);
+/*      
+       .__                 
+  ____ |__|_  _  _______   
+ /  _ \|  \ \/ \/ /\__  \  
+(  <_> )  |\     /  / __ \_
+ \____/|__| \/\_/  (____  /
+                        \/ 
+*///////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("v").textContent = "v1.1";
+});
+
+////////////////////////////////
+
+var flip = false;
+
+var str = "";
+var pos = 0;
+var invert = false;
+
+var name1 = "web designer";
+var name2 = "oiwa.lol";
+
+function loop() {
+    var text = flip ? name1 : name2;
+
+    if (pos > text.length) {
+        invert = true;
+    } else if (pos < 0) {
+        if (invert) {
+            flip = !flip;
+            text = flip ? name1 : name2;
+
+            pos = 0;
+        }
+
+        invert = false;
+    }
+
+    str = text.substring(0, pos);
+    pos += (invert ? -1 : 1);
+
+    if (isEven(str.length))
+        str = `${str}_`;
+
+    document.getElementsByTagName('title')[0].innerHTML = str;
+}
+
+function isEven(value) {
+    return !(value % 2)
+}
+
+setInterval(loop, 333);
+
+/////////////////////////////////////////////////////////////
