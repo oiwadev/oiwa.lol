@@ -6,9 +6,10 @@
  \____/|__| \/\_/  (____  /
                         \/ 
 *///////////////////////////////////////////////////////////////
+/* v1.3 */
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("v").textContent = "v1.1";
+    document.getElementById("v").textContent = "v1.3";
 });
 
 ////////////////////////////////
